@@ -33,7 +33,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
       listener: (context, state) {
         if (state is OnBoardingExitState) {
           getIt<SharedPrefHelper>().setData(AppStrings.isOnBoardingSkip, true);
-          GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+          GoRouter.of(context).pushReplacement(AppRouter.kLoginView);
         }
       },
       builder: (context, state) {

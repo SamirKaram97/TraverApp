@@ -15,6 +15,7 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(style: TextButton.styleFrom(
+      side: (color !=null) ?BorderSide(color:AppColors.greyColorWithOpacity4):null,
       backgroundColor: color,
           foregroundColor: color == null ? Colors.white : Colors.black,
     ),

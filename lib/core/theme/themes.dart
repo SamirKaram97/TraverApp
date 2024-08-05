@@ -10,22 +10,30 @@ ThemeData getLightTheme(context) => ThemeData(
     primary: AppColors.kPrimaryColor,
   ),
       textButtonTheme: _getTextButtonThemeData(context),
-      inputDecorationTheme: _getInputDecorationThemeData(),
+      inputDecorationTheme: _getInputDecorationThemeData(context),
 
       textTheme: GoogleFonts.montserratTextTheme(ThemeData.light().textTheme),
     );
 
-InputDecorationTheme _getInputDecorationThemeData() {
-  return const InputDecorationTheme(
-      labelStyle: TextStyle(color: Colors.grey,fontSize: 12),
-      contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(12),
-        ),
-        borderSide: BorderSide(
-          color: Colors.black,
-        ),
+InputDecorationTheme _getInputDecorationThemeData(context) {
+  return  InputDecorationTheme(
+      labelStyle:  TextStyle(color: AppColors.greyColor,fontSize: 12),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide:  BorderSide(color: AppColors.greyColor),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.kPrimaryColor),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: Colors.red),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: Colors.red),
       ),
 
     );

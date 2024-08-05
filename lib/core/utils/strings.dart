@@ -9,4 +9,9 @@ abstract class AppStrings {
   static const String onBoardingSubTitle3 = "Find thousands of tourist destinations ready for you to visit ";
   static const String next = 'Next';
   static const String isOnBoardingSkip = 'isOnBoardingSkip';
+  static const String forgotPassword = "Forget Password";
+  static const String signIn = "Sign In";
+  static const String email = "Email";
+  static const String password = "Password";
+  static const String createAccount = "Create Account";
 }

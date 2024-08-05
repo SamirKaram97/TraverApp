@@ -13,6 +13,11 @@ abstract class Styles {
       fontWeight: FontWeight.normal,
       color: AppColors.whiteColor);
 
+  static TextStyle textStyleNormal14(context) => TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 14),
+      fontWeight: FontWeight.normal,
+      color: AppColors.greyColor);
+
   static TextStyle textStyleBold20(context) => TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.bold,

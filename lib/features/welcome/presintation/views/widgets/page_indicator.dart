@@ -7,15 +7,13 @@ import 'current_indicator.dart';
 import 'not_active_indicator.dart';
 
 class PageIndicator extends StatelessWidget {
-  const PageIndicator({super.key});
+  const PageIndicator({super.key, required this.currentIndex});
+  final int currentIndex;
 
 
   @override
   Widget build(BuildContext context) {
-    return  BlocBuilder<OnBoardingCubit, OnBoardingState>(
-  builder: (context, state) {
-     int currentIndex=BlocProvider.of<OnBoardingCubit>(context).currentIndex;
-    return Padding(
+    return  Padding(
       padding: EdgeInsets.symmetric(horizontal: 24.0,vertical: 66.0+ MediaQuery.sizeOf(context).height*0.1),
       child:  Align(alignment: Alignment.bottomCenter,child: Row(
         children: [
@@ -24,7 +22,5 @@ class PageIndicator extends StatelessWidget {
         ],
       ),),
     );
-  },
-);
   }
 }
