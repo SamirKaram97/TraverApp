@@ -4,9 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'core/theme/themes.dart';
 import 'core/utils/app_router.dart';
 import 'core/theme/colors.dart';
-import 'core/utils/functions/bloc_observer.dart';
-import 'core/utils/functions/service_locator.dart';
-import 'core/utils/shared_pref_helper.dart';
+import 'core/services/bloc_observer.dart';
+import 'core/services/service_locator.dart';
+import 'core/services/shared_pref_singleton.dart';
 
 void main() async{
   mainInitMethods();

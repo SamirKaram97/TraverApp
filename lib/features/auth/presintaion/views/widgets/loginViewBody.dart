@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:traver/core/utils/functions/service_locator.dart';
-import 'package:traver/core/utils/shared_pref_helper.dart';
+import 'package:traver/core/services/service_locator.dart';
+import 'package:traver/core/services/shared_pref_singleton.dart';
 import 'package:traver/core/utils/strings.dart';
 import 'package:traver/core/widgets/app_button.dart';
 import '../../../../../core/utils/assets.dart';

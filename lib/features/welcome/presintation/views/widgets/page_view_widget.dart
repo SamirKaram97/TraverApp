@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:traver/core/utils/app_router.dart';
-import 'package:traver/core/utils/functions/service_locator.dart';
+import 'package:traver/core/services/service_locator.dart';
 import 'package:traver/core/utils/strings.dart';
-import '../../../../../core/utils/shared_pref_helper.dart';
+import '../../../../../core/services/shared_pref_singleton.dart';
 import '../../cubits/on_boarding_cubit/on_boarding_cubit.dart';
 import 'on_boarding_view_item.dart';
 
@@ -32,7 +32,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
     return BlocConsumer<OnBoardingCubit, OnBoardingState>(
       listener: (context, state) {
         if (state is OnBoardingExitState) {
-          getIt<SharedPrefHelper>().setData(AppStrings.isOnBoardingSkip, true);
+          getIt<SharedPref>().setData(AppStrings.isOnBoardingSkip, true);
           GoRouter.of(context).pushReplacement(AppRouter.kLoginView);
         }
       },
